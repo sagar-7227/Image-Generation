@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+# JWT
+jwt:
+  secret: mySuperLongRandomSecretKey_ChangeMe_1234567890!@#
+  expiration: 86400000  # 24 hours
+
+# File Upload
+app:
+  upload-dir: uploads/
+  max-file-size: 5242880  # 5MB in bytes
+  jwt:
+    secret: mySuperLongRandomSecretKey_ChangeMe_1234567890!@#
+    expiration: 86400000
+    expiration-ms: 86400000
+    header: Authorization
+    prefix: Bearer
+
+logging:
+  level:
+    com.example: DEBUG
