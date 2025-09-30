@@ -23,11 +23,6 @@ spring:
       max-file-size: 5MB
       max-request-size: 5MB
 
-# JWT
-jwt:
-  secret: mySuperLongRandomSecretKey_ChangeMe_1234567890!@#
-  expiration: 86400000  # 24 hours
-
 # File Upload
 app:
   upload-dir: uploads/
