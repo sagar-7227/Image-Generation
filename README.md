@@ -1,5 +1,7 @@
 # 🖼️ Image Processing Service
 
+Project Url - https://roadmap.sh/projects/image-processing-service
+
 A backend service built with **Spring Boot**, **MySQL**, and **Redis** that allows users to:
 
 - 🔐 Register and log in using JWT authentication
